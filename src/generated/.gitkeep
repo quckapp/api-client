@@ -1,0 +1,2 @@
+# This directory contains auto-generated files from openapi-typescript
+# Run `npm run generate` to generate schema.ts from the OpenAPI spec
