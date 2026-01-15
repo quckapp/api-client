@@ -1,8 +1,8 @@
 openapi: 3.1.0
 info:
-  title: QuikApp API
+  title: QuckApp API
   description: |
-    QuikApp is an enterprise communication platform providing real-time messaging,
+    QuckApp is an enterprise communication platform providing real-time messaging,
     voice/video calls, file sharing, and team collaboration features.
 
     ## Authentication
@@ -20,25 +20,25 @@ info:
     Some endpoints also support page-based pagination with `page` and `limit`.
 
     ## WebSocket
-    Real-time features are available via WebSocket at `wss://ws.quikapp.io`
+    Real-time features are available via WebSocket at `wss://ws.quckapp.io`
 
     ## Error Handling
     All errors return a consistent JSON structure with `error.code`, `error.message`,
     and optional `error.details` array for validation errors.
   version: 1.0.0
   contact:
-    name: QuikApp API Support
-    email: api-support@quikapp.io
-    url: https://docs.quikapp.io
+    name: QuckApp API Support
+    email: api-support@quckapp.io
+    url: https://docs.quckapp.io
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
   x-logo:
-    url: https://quikapp.io/logo.png
+    url: https://quckapp.io/logo.png
 servers:
-  - url: https://api.quikapp.io/v1
+  - url: https://api.quckapp.io/v1
     description: Production server
-  - url: https://api.staging.quikapp.io/v1
+  - url: https://api.staging.quckapp.io/v1
     description: Staging server
   - url: http://localhost:3000/v1
     description: Local development
@@ -6111,8 +6111,8 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: https://api.quikapp.io/oauth/authorize
-          tokenUrl: https://api.quikapp.io/oauth/token
+          authorizationUrl: https://api.quckapp.io/oauth/authorize
+          tokenUrl: https://api.quckapp.io/oauth/token
           scopes:
             read: Read access to user data
             write: Write access to user data
@@ -6203,7 +6203,7 @@ components:
           type: string
           format: uri
           description: Avatar image URL
-          example: https://cdn.quikapp.io/avatars/user123.jpg
+          example: https://cdn.quckapp.io/avatars/user123.jpg
         title:
           type: string
           description: Job title
@@ -6360,7 +6360,7 @@ components:
               type: string
               format: uri
               description: Link to relevant documentation
-              example: https://docs.quikapp.io/errors/BAD_REQUEST
+              example: https://docs.quckapp.io/errors/BAD_REQUEST
     RegisterRequest:
       type: object
       required:
@@ -6460,7 +6460,7 @@ components:
           type: string
           format: uri
           description: Redirect URI used in authorization request
-          example: https://app.quikapp.io/auth/callback
+          example: https://app.quckapp.io/auth/callback
     MfaSetupResponse:
       type: object
       properties:
@@ -6955,11 +6955,11 @@ components:
           type: string
           format: uri
           description: Workspace icon URL
-          example: https://cdn.quikapp.io/workspaces/acme/icon.png
+          example: https://cdn.quckapp.io/workspaces/acme/icon.png
         domain:
           type: string
           description: Custom domain for the workspace
-          example: acme.quikapp.io
+          example: acme.quckapp.io
         plan:
           type: string
           enum:

@@ -1,5 +1,5 @@
 /**
- * Type exports for QuikApp API
+ * Type exports for QuckApp API
  */
 
 import type { components } from './generated/schema';

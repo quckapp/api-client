@@ -3,9 +3,9 @@ import type { components } from './generated/schema';
 type ApiError = components['schemas']['Error'];
 
 /**
- * Custom error class for QuikApp API errors
+ * Custom error class for QuckApp API errors
  */
-export class QuikAppError extends Error {
+export class QuckAppError extends Error {
   public readonly code: string;
   public readonly status: number;
   public readonly details?: ApiError['error']['details'];
@@ -21,7 +21,7 @@ export class QuikAppError extends Error {
     documentation?: string
   ) {
     super(message);
-    this.name = 'QuikAppError';
+    this.name = 'QuckAppError';
     this.code = code;
     this.status = status;
     this.details = details;
@@ -30,15 +30,15 @@ export class QuikAppError extends Error {
 
     // Maintains proper stack trace for where error was thrown
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, QuikAppError);
+      Error.captureStackTrace(this, QuckAppError);
     }
   }
 
   /**
-   * Create a QuikAppError from an API error response
+   * Create a QuckAppError from an API error response
    */
-  static fromResponse(response: ApiError, status: number): QuikAppError {
-    return new QuikAppError(
+  static fromResponse(response: ApiError, status: number): QuckAppError {
+    return new QuckAppError(
       response.error.message,
       response.error.code,
       status,
@@ -135,10 +135,10 @@ export class QuikAppError extends Error {
 }
 
 /**
- * Type guard to check if an error is a QuikAppError
+ * Type guard to check if an error is a QuckAppError
  */
-export function isQuikAppError(error: unknown): error is QuikAppError {
-  return error instanceof QuikAppError;
+export function isQuckAppError(error: unknown): error is QuckAppError {
+  return error instanceof QuckAppError;
 }
 
 /**

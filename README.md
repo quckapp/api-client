@@ -1,24 +1,24 @@
-# @quikapp/api-client
+# @quckapp/api-client
 
-Type-safe TypeScript client for the QuikApp API, auto-generated from our OpenAPI specification.
+Type-safe TypeScript client for the QuckApp API, auto-generated from our OpenAPI specification.
 
 ## Installation
 
 ```bash
-npm install @quikapp/api-client
+npm install @quckapp/api-client
 # or
-yarn add @quikapp/api-client
+yarn add @quckapp/api-client
 # or
-pnpm add @quikapp/api-client
+pnpm add @quckapp/api-client
 ```
 
 ## Quick Start
 
 ```typescript
-import { createClient } from '@quikapp/api-client';
+import { createClient } from '@quckapp/api-client';
 
 const client = createClient({
-  baseUrl: 'https://api.quikapp.io/v1',
+  baseUrl: 'https://api.quckapp.io/v1',
   token: 'your-jwt-token',
 });
 
@@ -38,11 +38,11 @@ if (error) {
 ## Configuration
 
 ```typescript
-import { createClient } from '@quikapp/api-client';
+import { createClient } from '@quckapp/api-client';
 
 const client = createClient({
   // Required: API base URL
-  baseUrl: 'https://api.quikapp.io/v1',
+  baseUrl: 'https://api.quckapp.io/v1',
 
   // Optional: JWT token for authenticated requests
   token: 'your-jwt-token',
@@ -292,7 +292,7 @@ const { data: channelPresence } = await client.presence.getChannelPresence('chan
 ## Error Handling
 
 ```typescript
-import { createClient, QuikAppError, isQuikAppError } from '@quikapp/api-client';
+import { createClient, QuckAppError, isQuckAppError } from '@quckapp/api-client';
 
 const client = createClient({ baseUrl: '...' });
 
@@ -300,7 +300,7 @@ try {
   const { data, error } = await client.users.get('invalid-id');
 
   if (error) {
-    // error is a QuikAppError instance
+    // error is a QuckAppError instance
     console.log(error.code);      // 'NOT_FOUND'
     console.log(error.status);    // 404
     console.log(error.message);   // 'User not found'
@@ -318,7 +318,7 @@ try {
     }
   }
 } catch (e) {
-  if (isQuikAppError(e)) {
+  if (isQuckAppError(e)) {
     // Handle API error
   } else {
     // Handle network or other error
@@ -339,7 +339,7 @@ import type {
   Notification,
   LoginRequest,
   LoginResponse,
-} from '@quikapp/api-client';
+} from '@quckapp/api-client';
 
 function handleUser(user: User) {
   console.log(user.displayName);

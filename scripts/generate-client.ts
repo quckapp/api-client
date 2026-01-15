@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 /**
- * Post-generation script for the QuikApp API client
+ * Post-generation script for the QuckApp API client
  *
  * This script runs after openapi-typescript generates the schema types.
  * It can be used for additional processing, validation, or customization.

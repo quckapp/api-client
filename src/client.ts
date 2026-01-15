@@ -1,6 +1,6 @@
 import createFetchClient, { type Middleware } from 'openapi-fetch';
 import type { paths, components } from './generated/schema';
-import { QuikAppError } from './error';
+import { QuckAppError } from './error';
 
 type Schemas = components['schemas'];
 
@@ -8,7 +8,7 @@ type Schemas = components['schemas'];
  * Client configuration options
  */
 export interface ClientConfig {
-  /** Base URL for the API (e.g., 'https://api.quikapp.io/v1') */
+  /** Base URL for the API (e.g., 'https://api.quckapp.io/v1') */
   baseUrl: string;
   /** JWT access token for authentication */
   token?: string;
@@ -23,13 +23,13 @@ export interface ClientConfig {
   /** Callback when token needs refresh */
   onTokenRefresh?: () => Promise<string | null>;
   /** Callback on authentication error */
-  onAuthError?: (error: QuikAppError) => void;
+  onAuthError?: (error: QuckAppError) => void;
 }
 
 /**
- * QuikApp API Client interface
+ * QuckApp API Client interface
  */
-export interface QuikAppClient {
+export interface QuckAppClient {
   setToken: (token: string | null) => void;
   raw: ReturnType<typeof createFetchClient<paths>>;
   auth: {
@@ -150,9 +150,9 @@ export interface QuikAppClient {
 }
 
 /**
- * Create a QuikApp API client
+ * Create a QuckApp API client
  */
-export function createClient(config: ClientConfig): QuikAppClient {
+export function createClient(config: ClientConfig): QuckAppClient {
   const {
     baseUrl,
     token,
@@ -211,15 +211,15 @@ export function createClient(config: ClientConfig): QuikAppClient {
         try {
           const errorBody = await response.clone().json();
           if (errorBody.error) {
-            const error = QuikAppError.fromResponse(errorBody, response.status);
+            const error = QuckAppError.fromResponse(errorBody, response.status);
             if (response.status === 401 && onAuthError) {
               onAuthError(error);
             }
             throw error;
           }
         } catch (e) {
-          if (e instanceof QuikAppError) throw e;
-          throw new QuikAppError(
+          if (e instanceof QuckAppError) throw e;
+          throw new QuckAppError(
             response.statusText || 'Request failed',
             'UNKNOWN_ERROR',
             response.status

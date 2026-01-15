@@ -1,14 +1,14 @@
 /**
- * QuikApp TypeScript API Client
+ * QuckApp TypeScript API Client
  *
- * Auto-generated type-safe client for the QuikApp API
+ * Auto-generated type-safe client for the QuckApp API
  *
  * @example
  * ```ts
- * import { createClient } from '@quikapp/api-client';
+ * import { createClient } from '@quckapp/api-client';
  *
  * const client = createClient({
- *   baseUrl: 'https://api.quikapp.io/v1',
+ *   baseUrl: 'https://api.quckapp.io/v1',
  *   token: 'your-jwt-token',
  * });
  *
@@ -20,8 +20,8 @@
  * ```
  */
 
-export { createClient, type QuikAppClient, type ClientConfig } from './client';
-export { QuikAppError, isQuikAppError } from './error';
+export { createClient, type QuckAppClient, type ClientConfig } from './client';
+export { QuckAppError, isQuckAppError } from './error';
 export * from './types';
 
 // Re-export generated types
