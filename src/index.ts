@@ -1,28 +1,206 @@
-/**
- * QuckApp TypeScript API Client
- *
- * Auto-generated type-safe client for the QuckApp API
- *
- * @example
- * ```ts
- * import { createClient } from '@quckapp/api-client';
- *
- * const client = createClient({
- *   baseUrl: 'https://api.quckapp.io/v1',
- *   token: 'your-jwt-token',
- * });
- *
- * // Type-safe API calls
- * const { data, error } = await client.auth.login({
- *   email: 'user@example.com',
- *   password: 'password',
- * });
- * ```
- */
+/* generated using openapi-typescript-codegen -- do not edit */
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+export { ApiError } from './core/ApiError';
+export { CancelablePromise, CancelError } from './core/CancelablePromise';
+export { OpenAPI } from './core/OpenAPI';
+export type { OpenAPIConfig } from './core/OpenAPI';
 
-export { createClient, type QuckAppClient, type ClientConfig } from './client';
-export { QuckAppError, isQuckAppError } from './error';
-export * from './types';
+export type { ActivityStatus } from './models/ActivityStatus';
+export type { AddMembersRequest } from './models/AddMembersRequest';
+export type { ApiResponse } from './models/ApiResponse';
+export type { AuthorizationUrlResponse } from './models/AuthorizationUrlResponse';
+export type { AuthResponse } from './models/AuthResponse';
+export type { AuthUser } from './models/AuthUser';
+export type { BackupCodesResponse } from './models/BackupCodesResponse';
+export type { BatchApiResponse } from './models/BatchApiResponse';
+export type { BlockElement } from './models/BlockElement';
+export type { BulkPresenceResponse } from './models/BulkPresenceResponse';
+export type { Call } from './models/Call';
+export type { CallActionRequest } from './models/CallActionRequest';
+export type { CallCreateRequest } from './models/CallCreateRequest';
+export type { CallParticipant } from './models/CallParticipant';
+export type { CallRecording } from './models/CallRecording';
+export type { CallRecurrence } from './models/CallRecurrence';
+export type { CallSettings } from './models/CallSettings';
+export type { CallUpdateRequest } from './models/CallUpdateRequest';
+export type { ChangePasswordRequest } from './models/ChangePasswordRequest';
+export type { Channel } from './models/Channel';
+export type { ChannelCreateRequest } from './models/ChannelCreateRequest';
+export type { ChannelId } from './models/ChannelId';
+export type { ChannelMember } from './models/ChannelMember';
+export type { ChannelNotificationSettings } from './models/ChannelNotificationSettings';
+export type { ChannelPresence } from './models/ChannelPresence';
+export type { ChannelSettings } from './models/ChannelSettings';
+export type { ChannelUpdateRequest } from './models/ChannelUpdateRequest';
+export type { CreateSavedSearchRequest } from './models/CreateSavedSearchRequest';
+export type { CreateUserRequest } from './models/CreateUserRequest';
+export type { Cursor } from './models/Cursor';
+export type { DateFacetBucket } from './models/DateFacetBucket';
+export type { DesktopNotificationSettings } from './models/DesktopNotificationSettings';
+export type { DevicePresence } from './models/DevicePresence';
+export type { DeviceToken } from './models/DeviceToken';
+export type { DirectMessage } from './models/DirectMessage';
+export type { EmailNotificationSettings } from './models/EmailNotificationSettings';
+export type { Error } from './models/Error';
+export type { ErrorDetail } from './models/ErrorDetail';
+export type { ExternalLink } from './models/ExternalLink';
+export type { FacetBucket } from './models/FacetBucket';
+export type { File } from './models/File';
+export type { FileAttachment } from './models/FileAttachment';
+export type { FileMetadata } from './models/FileMetadata';
+export type { FileShare } from './models/FileShare';
+export type { FileUpdateRequest } from './models/FileUpdateRequest';
+export type { FileUploadRequest } from './models/FileUploadRequest';
+export type { FileUploadResponse } from './models/FileUploadResponse';
+export type { ForgotPasswordRequest } from './models/ForgotPasswordRequest';
+export type { GroupDirectMessage } from './models/GroupDirectMessage';
+export type { Huddle } from './models/Huddle';
+export type { HuddleActionRequest } from './models/HuddleActionRequest';
+export type { HuddleInvite } from './models/HuddleInvite';
+export type { HuddleNote } from './models/HuddleNote';
+export type { HuddleParticipant } from './models/HuddleParticipant';
+export type { HuddleThread } from './models/HuddleThread';
+export type { InviteMembersRequest } from './models/InviteMembersRequest';
+export type { JoinCallRequest } from './models/JoinCallRequest';
+export type { JoinHuddleRequest } from './models/JoinHuddleRequest';
+export type { Limit } from './models/Limit';
+export type { LimitParam } from './models/LimitParam';
+export type { LinkedProvidersResponse } from './models/LinkedProvidersResponse';
+export type { LoginRequest } from './models/LoginRequest';
+export type { LoginResponse } from './models/LoginResponse';
+export type { MarkNotificationsReadRequest } from './models/MarkNotificationsReadRequest';
+export type { Mention } from './models/Mention';
+export type { Message } from './models/Message';
+export type { MessageBlock } from './models/MessageBlock';
+export type { MessageCreateRequest } from './models/MessageCreateRequest';
+export type { MessageId } from './models/MessageId';
+export type { MessagePreview } from './models/MessagePreview';
+export type { MessageResponse } from './models/MessageResponse';
+export type { MessageUpdateRequest } from './models/MessageUpdateRequest';
+export type { MobileNotificationSettings } from './models/MobileNotificationSettings';
+export type { Notification } from './models/Notification';
+export type { NotificationAction } from './models/NotificationAction';
+export type { NotificationData } from './models/NotificationData';
+export type { NotificationSchedule } from './models/NotificationSchedule';
+export type { NotificationSettings } from './models/NotificationSettings';
+export type { OAuth2ProvidersResponse } from './models/OAuth2ProvidersResponse';
+export type { OAuthRequest } from './models/OAuthRequest';
+export type { OtpResponse } from './models/OtpResponse';
+export type { Page } from './models/Page';
+export type { PagedApiResponse } from './models/PagedApiResponse';
+export type { PageParam } from './models/PageParam';
+export type { PageResponse } from './models/PageResponse';
+export type { Pagination } from './models/Pagination';
+export type { PhoneLoginRequest } from './models/PhoneLoginRequest';
+export type { PhoneOtpRequest } from './models/PhoneOtpRequest';
+export type { PhoneVerifyRequest } from './models/PhoneVerifyRequest';
+export type { PreferencesApiResponse } from './models/PreferencesApiResponse';
+export type { PreferencesResponse } from './models/PreferencesResponse';
+export type { Presence } from './models/Presence';
+export type { PresencePreferences } from './models/PresencePreferences';
+export type { PresenceSubscription } from './models/PresenceSubscription';
+export type { Profile } from './models/Profile';
+export type { ProfileApiResponse } from './models/ProfileApiResponse';
+export type { ProfileResponse } from './models/ProfileResponse';
+export type { ProviderInfo } from './models/ProviderInfo';
+export type { PushSubscription } from './models/PushSubscription';
+export type { QuickSearchItem } from './models/QuickSearchItem';
+export type { QuickSearchResponse } from './models/QuickSearchResponse';
+export type { Reaction } from './models/Reaction';
+export type { ReactionRequest } from './models/ReactionRequest';
+export type { RefreshTokenRequest } from './models/RefreshTokenRequest';
+export type { RegisterRequest } from './models/RegisterRequest';
+export type { ResetPasswordRequest } from './models/ResetPasswordRequest';
+export type { RevokeTokenRequest } from './models/RevokeTokenRequest';
+export type { SavedSearch } from './models/SavedSearch';
+export type { ScheduledCall } from './models/ScheduledCall';
+export type { ScheduledMessage } from './models/ScheduledMessage';
+export type { ScheduleMessageRequest } from './models/ScheduleMessageRequest';
+export type { SearchFacets } from './models/SearchFacets';
+export type { SearchFilters } from './models/SearchFilters';
+export type { SearchHighlight } from './models/SearchHighlight';
+export type { SearchHistory } from './models/SearchHistory';
+export type { SearchRequest } from './models/SearchRequest';
+export type { SearchResponse } from './models/SearchResponse';
+export type { SearchResult } from './models/SearchResult';
+export type { SelectOption } from './models/SelectOption';
+export type { Session } from './models/Session';
+export type { SessionsResponse } from './models/SessionsResponse';
+export type { SetTypingRequest } from './models/SetTypingRequest';
+export type { ShareFileRequest } from './models/ShareFileRequest';
+export type { SortOrder } from './models/SortOrder';
+export type { StartHuddleRequest } from './models/StartHuddleRequest';
+export type { StorageQuota } from './models/StorageQuota';
+export type { SubscribeThreadRequest } from './models/SubscribeThreadRequest';
+export type { TextObject } from './models/TextObject';
+export type { Thread } from './models/Thread';
+export type { ThreadListResponse } from './models/ThreadListResponse';
+export type { ThreadRepliesResponse } from './models/ThreadRepliesResponse';
+export type { ThreadReply } from './models/ThreadReply';
+export type { ThreadSubscription } from './models/ThreadSubscription';
+export type { ThreadSummary } from './models/ThreadSummary';
+export type { Timestamp } from './models/Timestamp';
+export type { TokenPair } from './models/TokenPair';
+export type { TokenResponse } from './models/TokenResponse';
+export type { TokenValidationRequest } from './models/TokenValidationRequest';
+export type { TokenValidationResponse } from './models/TokenValidationResponse';
+export type { TwoFactorDisableRequest } from './models/TwoFactorDisableRequest';
+export type { TwoFactorEnableRequest } from './models/TwoFactorEnableRequest';
+export type { TwoFactorEnableResponse } from './models/TwoFactorEnableResponse';
+export type { TwoFactorLoginRequest } from './models/TwoFactorLoginRequest';
+export type { TwoFactorSetupResponse } from './models/TwoFactorSetupResponse';
+export type { TwoFactorVerifyRequest } from './models/TwoFactorVerifyRequest';
+export type { TypingIndicator } from './models/TypingIndicator';
+export type { TypingUser } from './models/TypingUser';
+export type { UpdateHuddleRequest } from './models/UpdateHuddleRequest';
+export type { UpdateNotificationSettingsRequest } from './models/UpdateNotificationSettingsRequest';
+export type { UpdatePreferencesRequest } from './models/UpdatePreferencesRequest';
+export type { UpdatePresenceRequest } from './models/UpdatePresenceRequest';
+export type { UpdateProfileRequest } from './models/UpdateProfileRequest';
+export type { UpdateThreadRequest } from './models/UpdateThreadRequest';
+export type { UpdateUserRequest } from './models/UpdateUserRequest';
+export type { User } from './models/User';
+export type { UserId } from './models/UserId';
+export type { UserPreferences } from './models/UserPreferences';
+export type { UserProfile } from './models/UserProfile';
+export type { UserResponse } from './models/UserResponse';
+export type { UserSummary } from './models/UserSummary';
+export type { UserSummaryResponse } from './models/UserSummaryResponse';
+export type { ValidationError } from './models/ValidationError';
+export type { Workspace } from './models/Workspace';
+export type { WorkspaceCreateRequest } from './models/WorkspaceCreateRequest';
+export type { WorkspaceId } from './models/WorkspaceId';
+export type { WorkspaceInvite } from './models/WorkspaceInvite';
+export type { WorkspaceMember } from './models/WorkspaceMember';
+export type { WorkspaceSettings } from './models/WorkspaceSettings';
+export type { WorkspaceStats } from './models/WorkspaceStats';
+export type { WorkspaceUpdateRequest } from './models/WorkspaceUpdateRequest';
 
-// Re-export generated types
-export type { paths, components, operations } from './generated/schema';
+export { AdminService } from './services/AdminService';
+export { AuthenticationService } from './services/AuthenticationService';
+export { BatchService } from './services/BatchService';
+export { CallsService } from './services/CallsService';
+export { ChannelsService } from './services/ChannelsService';
+export { DirectMessagesService } from './services/DirectMessagesService';
+export { FilesService } from './services/FilesService';
+export { HuddlesService } from './services/HuddlesService';
+export { InvitesService } from './services/InvitesService';
+export { MembersService } from './services/MembersService';
+export { MessagesService } from './services/MessagesService';
+export { MfaService } from './services/MfaService';
+export { NotificationsService } from './services/NotificationsService';
+export { OAuth2Service } from './services/OAuth2Service';
+export { PasswordService } from './services/PasswordService';
+export { PhoneOtpService } from './services/PhoneOtpService';
+export { PreferencesService } from './services/PreferencesService';
+export { PresenceService } from './services/PresenceService';
+export { ProfileService } from './services/ProfileService';
+export { ReactionsService } from './services/ReactionsService';
+export { SearchService } from './services/SearchService';
+export { SessionsService } from './services/SessionsService';
+export { ThreadsService } from './services/ThreadsService';
+export { TokenService } from './services/TokenService';
+export { UsersService } from './services/UsersService';
+export { WorkspacesService } from './services/WorkspacesService';
