@@ -17,7 +17,7 @@
     "src"
   ],
   "scripts": {
-    "generate": "npx openapi-typescript-codegen --input ../../docs/api/openapi-bundled.yaml --output src --client axios --useOptions --useUnionTypes",
+    "generate": "npx openapi-typescript-codegen --input ../../docs/api/v1/openapi-bundled.yaml --output src --client axios --useOptions --useUnionTypes",
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
