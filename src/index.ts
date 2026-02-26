@@ -204,3 +204,5 @@ export { ThreadsService } from './services/ThreadsService';
 export { TokenService } from './services/TokenService';
 export { UsersService } from './services/UsersService';
 export { WorkspacesService } from './services/WorkspacesService';
+
+export { VersionedClient } from './core/VersionedClient';
